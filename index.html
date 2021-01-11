@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMaster</title>
+
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="/assets/stylesheets/neumorphism.css">
+    <link rel="stylesheet" href="/assets/stylesheets/fontawesome.css">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar-main" aria-label="Primary navigation"
+            class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
+            <div class="container position-relative">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/">
+                    <h5 class="m-0 font-weight-bolder">
+                        <span class="fa fa-play icon-log text-warning" aria-hidden="true"></span>
+                        <span class="text-capitalize">MovieMaster</span>
+                    </h5>
+                </a>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="/" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                    <span class="fa fa-play icon-log text-warning" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <a href="#navbar_global" class="fa fa-times" data-toggle="collapse"
+                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                    title="close" aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link font-weight-bold">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link font-weight-bold">Genre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <span class="nav-link-inner-text font-weight-bold">Location</span>
+                                <span class="fa fa-angle-down nav-link-arrow ml-2"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-soft">
+                                <h5><a class="text-secondary text-truncate font-weight-bold mx-3"
+                                        href="./html/pages/about.html">Erumely, Kerala, India</a></h5>
+                                <li><a class="dropdown-item" href="/login"><i
+                                            class="fa fa-location-arrow text-secondary mr-2"></i> Pick another
+                                        location</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <span class="nav-link-inner-text font-weight-bold">Account</span>
+                                <span class="fa fa-angle-down nav-link-arrow ml-2"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-soft">
+                                <h5 class="row px-3">
+                                    <div class="col my-auto">
+                                        <a class="text-secondary font-weight-bold"
+                                            href="./html/pages/about.html">Account</a>
+                                    </div>
+                                    <div class="col">
+                                        <img src="./assets/images/profile.png" class="profile_img float-right">
+                                    </div>
+                                </h5>
+                                <li><a class="dropdown-item" href="/login"><i
+                                            class="fa fa-sign-in text-secondary mr-2"></i> Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <div class="search-right">
+                                <a href="#search" class="btn btn-primary btn-sm font-weight-bold px-3" title="search">
+                                    Search <span class="fa fa-search ml-3" aria-hidden="true"></span>
+                                </a>
+                                <div id="search" class="pop-overlay">
+                                    <div class="popup">
+                                        <form class="search-box" id="search-box">
+                                            <input type="search" placeholder="Search your Keyword" name="searchQuery"
+                                                id="searchQuery" required="required" autofocus="" autocomplete="false">
+                                            <button type="submit" class="btn btn-primary mx-2"><span
+                                                    class="fa fa-search" aria-hidden="true"></span></button>
+                                            <div class="bg-white rounded mt-2 py-2" id="results-container" hidden
+                                                style="max-height: 50vh; overflow-y: auto;"></div>
+                                        </form>
+                                    </div>
+                                    <a class="close" href="#close">×</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                        data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main-slider -->
+    <section class="w3l-main-slider position-relative" id="home">
+        <div class="companies20-content">
+            <div class="owl-one owl-carousel owl-theme">
+                <div class="item carousel slide shadow-soft border border-light rounded">
+                    <li>
+                        <div class="slider-info banner-view bg bg2"
+                            style="background: url(./assets/images/movies/banner1.jpg) no-repeat center; background-size: cover;">
+                            <div class="banner-info">
+                                <p class="text-truncate mb-3">
+                                    <span class="bg-warning font-weight-bold text-truncate rounded px-3 py-1">
+                                        Genre
+                                    </span>
+                                    <span class="bg-info font-weight-bold text-truncate rounded ml-3 px-3 py-1">
+                                        Language
+                                    </span>
+                                </p>
+                                <h3>Movie Title</h3>
+                                <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Cast :
+                                    </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla numquam dolor
+                                    nisi necessitatibus voluptate odit nihil impedit at vero sit, et pariatur alias
+                                    sequi repellat quos veniam explicabo accusantium consequatur.</p>
+                                <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Director :
+                                    </span>Director</p>
+                                <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Run Time :
+                                    </span>03:02</p>
+                                <p class="text-truncate mt-1"><span class="font-weight-bold">Release Date :
+                                    </span>01-01-2021</p>
+                                <a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
+                                    <span class="video-play-icon">
+                                        <span class="fa fa-play"></span>
+                                    </span>
+                                    <h6>Watch Trailer</h6>
+                                </a>
+                                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                <div id="small-dialog1" class="zoom-anim-dialog mfp-hide small-dialog">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="item carousel slide shadow-soft border border-light rounded">
+                    <li>
+                        <div class="slider-info banner-view bg bg2"
+                            style="background: url(./assets/images/movies/banner2.jpg) no-repeat center; background-size: cover;">
+                            <div class="banner-info">
+                                <p class="text-truncate mb-3">
+                                    <span class="bg-warning font-weight-bold text-truncate rounded px-3 py-1">
+                                        Genre
+                                    </span>
+                                    <span class="bg-info font-weight-bold text-truncate rounded ml-3 px-3 py-1">
+                                        Language
+                                    </span>
+                                </p>
+                                <h3>Movie Title</h3>
+                                <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Cast :
+                                    </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla numquam dolor
+                                    nisi necessitatibus voluptate odit nihil impedit at vero sit, et pariatur alias
+                                    sequi repellat quos veniam explicabo accusantium consequatur.</p>
+                                <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Director :
+                                    </span>Director</p>
+                                <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Run Time :
+                                    </span>03:02</p>
+                                <p class="text-truncate mt-1"><span class="font-weight-bold">Release Date :
+                                    </span>01-01-2021</p>
+                                <a href="#small-dialog2" class="popup-with-zoom-anim play-view1">
+                                    <span class="video-play-icon">
+                                        <span class="fa fa-play"></span>
+                                    </span>
+                                    <h6>Watch Trailer</h6>
+                                </a>
+                                <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                <div id="small-dialog2" class="zoom-anim-dialog mfp-hide small-dialog">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner-slider-->
+    <!-- main-slider -->
+    <!--grids-sec1-->
+    <section class="w3l-grids">
+        <div class="grids-main py-5">
+            <div class="container py-lg-3">
+                <div class="headerhny-title shadow-soft border-light rounded p-3">
+                    <div class="w3l-title-grids">
+                        <div class="headerhny-left">
+                            <h3 class="hny-title m-0">Now Showing Movies</h3>
+                        </div>
+                        <div class="headerhny-right text-right">
+                            <h4><a class="btn btn-primary btn-sm font-weight-bold text-danger border-light px-3"
+                                    href="/now-showing-movies">Show all</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3l-populohny-grids px-2">
+                    <a href="/view-movie?movieId={{this._id}}" class="animate-up-8">
+                        <div class="item vhny-grid shadow-soft">
+                            <div class="box16">
+                                <figure>
+                                    <img class="" src="/assets/images/movies/banner1.jpg"
+                                        style="height: 25rem; object-fit: cover !important;">
+                                </figure>
+                                <div class="box-content">
+                                    <h3 class="title">Movie Title</h3>
+                                    <h4>
+                                        <span class="post"><span class="fa fa-clock-o"> Run Time : </span>
+                                            03:02</span>
+                                    </h4>
+                                    <h4>
+                                        <span
+                                            class="post bg-warning text-dark font-weight-bold text-truncate rounded px-3">Genre</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/view-movie?movieId={{this._id}}" class="animate-up-8">
+                        <div class="item vhny-grid shadow-soft">
+                            <div class="box16">
+                                <figure>
+                                    <img class="" src="/assets/images/movies/banner2.jpg"
+                                        style="height: 25rem; object-fit: cover !important;">
+                                </figure>
+                                <div class="box-content">
+                                    <h3 class="title">Movie Title</h3>
+                                    <h4>
+                                        <span class="post"><span class="fa fa-clock-o"> Run Time : </span>
+                                            03:02</span>
+                                    </h4>
+                                    <h4>
+                                        <span
+                                            class="post bg-warning text-dark font-weight-bold text-truncate rounded px-3">Genre</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//grids-sec1-->
+    <!--mid-slider -->
+    <section class="w3l-mid-slider position-relative">
+        <div class="companies20-content">
+            <div class="owl-mid owl-carousel owl-theme">
+                <div class="item">
+                    <li>
+                        <div class="slider-info mid-view bg bg2"
+                            style="background: url(/assets/images/movies/banner1.jpg) no-repeat center; background-size: cover;">
+                            <div class="container">
+                                <div class="mid-info">
+                                    <span class="sub-text">Genre</span>
+                                    <h3>Movie Title</h3>
+                                    <p>01-01-2021 ‧ English ‧ 03:02</p>
+                                    <a class="watch popup-with-zoom-anim play-view1" href="#small-dialog3"><span
+                                            class="fa fa-play" aria-hidden="true"></span>
+                                        Watch Trailer</a>
+                                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                    <div id="small-dialog3" class="zoom-anim-dialog mfp-hide small-dialog">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="item">
+                    <li>
+                        <div class="slider-info mid-view bg bg2"
+                            style="background: url(/assets/images/movies/banner2.jpg) no-repeat center; background-size: cover;">
+                            <div class="container">
+                                <div class="mid-info">
+                                    <span class="sub-text">Genre</span>
+                                    <h3>Movie Title</h3>
+                                    <p>01-01-2021 ‧ English ‧ 03:02</p>
+                                    <a class="watch popup-with-zoom-anim play-view1" href="#small-dialog4"><span
+                                            class="fa fa-play" aria-hidden="true"></span>
+                                        Watch Trailer</a>
+                                    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                                    <div id="small-dialog4" class="zoom-anim-dialog mfp-hide small-dialog">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //mid-slider-->
+    <!--grids-sec2-->
+    <section class="w3l-grids">
+        <div class="grids-main py-5">
+            <div class="container py-lg-3">
+                <div class="headerhny-title shadow-soft border-light rounded p-3">
+                    <div class="w3l-title-grids">
+                        <div class="headerhny-left">
+                            <h3 class="hny-title m-0">Upcoming Movies</h3>
+                        </div>
+                        <div class="headerhny-right text-lg-right">
+                            <h4><a class="btn btn-primary btn-sm font-weight-bold border-light text-danger px-3" href="/upcoming-movies">Show all</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-three owl-carousel owl-theme">
+                    <div class="item vhny-grid shadow-soft rounded">
+                        <div class="box16 mb-0">
+                            <figure>
+                                <img class="img-fluid" src="/assets/images/movies/banner1.jpg"
+                                    style="height: 10rem; object-fit: cover;" alt="">
+                            </figure>
+                            <div class="box-content">
+                                <h4>
+                                    <span class="post"><span class="fa fa-clock-o"> </span> 03:02 </span>
+                                </h4>
+                            </div>
+                            <a href="#small-dialog6" class="popup-with-zoom-anim play-view1">
+                                <span class="fa fa-play video-icon" aria-hidden="true"></span>
+                            </a>
+                            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                            <div id="small-dialog6" class="zoom-anim-dialog mfp-hide small-dialog">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div style="height: 8rem; overflow-y: auto;" class="px-2">
+                            <h3 class=""> <a class="title-gd" type="button">Movie Title</a></h3>
+                            <p class="text-truncate"><span class="font-weight-bold">Cast : </span>Lorem, ipsum dolor sit
+                                amet consectetur adipisicing elit. Iusto praesentium neque earum optio similique, nulla
+                                tenetur illum omnis culpa, repudiandae architecto, odit quam. Dicta distinctio, voluptas
+                                possimus molestiae iure vel.</p>
+                            <p class="text-truncate"><span class="font-weight-bold">Director : </span>Director
+                            </p>
+                            <p class="text-truncate"><span class="font-weight-bold">Release Date :
+                                </span>01-01-2021</p>
+                        </div>
+                        <div class="button-center text-center p-3">
+                            <a href="/view-upcoming-movie?movieId={{this._id}}"
+                                class="btn btn-primary btn-block text-secondary text-uppercase">View</a>
+                        </div>
+                    </div>
+                    <div class="item vhny-grid shadow-soft rounded">
+                        <div class="box16 mb-0">
+                            <figure>
+                                <img class="img-fluid" src="/assets/images/movies/banner2.jpg"
+                                    style="height: 10rem; object-fit: cover;" alt="">
+                            </figure>
+                            <div class="box-content">
+                                <h4>
+                                    <span class="post"><span class="fa fa-clock-o"> </span> 03:02 </span>
+                                </h4>
+                            </div>
+                            <a href="#small-dialog6" class="popup-with-zoom-anim play-view1">
+                                <span class="fa fa-play video-icon" aria-hidden="true"></span>
+                            </a>
+                            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                            <div id="small-dialog6" class="zoom-anim-dialog mfp-hide small-dialog">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div style="height: 8rem; overflow-y: auto;" class="px-2">
+                            <h3 class=""> <a class="title-gd" type="button">Movie Title</a></h3>
+                            <p class="text-truncate"><span class="font-weight-bold">Cast : </span>Lorem, ipsum dolor sit
+                                amet consectetur adipisicing elit. Iusto praesentium neque earum optio similique, nulla
+                                tenetur illum omnis culpa, repudiandae architecto, odit quam. Dicta distinctio, voluptas
+                                possimus molestiae iure vel.</p>
+                            <p class="text-truncate"><span class="font-weight-bold">Director : </span>Director
+                            </p>
+                            <p class="text-truncate"><span class="font-weight-bold">Release Date :
+                                </span>01-01-2021</p>
+                        </div>
+                        <div class="button-center text-center p-3">
+                            <a href="/view-upcoming-movie?movieId={{this._id}}"
+                                class="btn btn-primary btn-block text-secondary text-uppercase">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--grids-sec2-->
+    <!-- footer-66 -->
+    <footer class="w3l-footer">
+        <section class="footer-inner-main">
+            <div class="footer-hny-grids py-5">
+                <div class="container py-lg-4">
+                    <div class="text-txt">
+                        <div class="right-side">
+                            <div class="row footer-links">
+                                <div class="col-md-4 col-sm-6 sub-two-right mt-5">
+                                    <h6>Movies</h6>
+                                    <ul>
+                                        <li><a href="/">Movies</a></li>
+                                        <li><a href="/">Genre</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-6 sub-two-right mt-5">
+                                    <h6>Information</h6>
+                                    <ul>
+                                        <li><a href="/login">Login</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-6 sub-two-right mt-5">
+                                    <h6>Locations</h6>
+                                    <ul>
+                                        <li><a href="/">India</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="below-section">
+                <div class="container">
+                    <div class="copyright-footer">
+                        <div class="columns text-lg-left">
+                            <p>&copy; 2020 MovieMaster. All rights reserved | Developed by <a href="/">Vishnu C
+                                    Prasad</a></p>
+                        </div>
+
+                        <ul class="social text-lg-right">
+                            <li><a href="/"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="/"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="/"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="/"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright -->
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                <span class="fa fa-arrow-up" aria-hidden="true"></span>
+            </button>
+            <!-- /move top -->
+
+        </section>
+    </footer>
+    <!--//footer-66 -->
+
+    <script src="./assets/javascripts/jquery.min.js"></script>
+    <script src="./assets/javascripts/jquery.counterup.min.js"></script>
+    <script src="./assets/javascripts/jquery.countdown.min.js"></script>
+    <script src="./assets/javascripts/popper.min.js"></script>
+    <script src="./assets/javascripts/bootstrap.min.js"></script>
+    <script src="./assets/javascripts/jquery.magnific-popup.min.js"></script>
+    <script src="./assets/javascripts/owl.carousel.js"></script>
+    <script src="./assets/javascripts/owl.config.js"></script>
+    <script src="/assets/javascripts/neumorphism.js"></script>
+    <script src="/assets/javascripts/script.js"></script>
+</body>
+
+</html>
