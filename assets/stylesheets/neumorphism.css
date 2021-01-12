@@ -39,11 +39,11 @@
     --gray: #93a5be;
     --gray-dark: #525480;
     --primary: #e6e7ee;
-    --secondary: #2D4CC8;
-    --success: #18634B;
+    --secondary: #f57b51;
+    --success: #03c895;
     --info: #0056B3;
     --warning: #F0B400;
-    --danger: #A91E2C;
+    --danger: #d63447;
     --light: #D1D9E6;
     --dark: #31344b;
     --default: #262833;
@@ -16617,11 +16617,11 @@ a.text-secondary:hover, a.text-secondary:focus {
 }
 
 .text-success {
-    color: #18634B !important;
+    color: #03c895 !important;
 }
 
 a.text-success:hover, a.text-success:focus {
-    color: #09251c !important;
+    color: #04ac7f !important;
 }
 
 .text-info {
@@ -31953,11 +31953,11 @@ article a:hover {
 }
 
 .text-success, .text-success:hover {
-    color: #18634B !important;
+    color: #03c895 !important;
 }
 
 .text-success a:not(.btn), .text-success h1, .text-success h2, .text-success h3, .text-success h4, .text-success h5, .text-success h6, .text-success .h1, .text-success .h2, .text-success .h3, .text-success .h4, .text-success .h5, .text-success .h6, .text-success .display-1, .text-success .display-2, .text-success .display-3, .text-success .display-4 {
-    color: #18634B;
+    color: #03c895;
 }
 
 .text-success .text-muted {
