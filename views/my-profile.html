@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMaster</title>
+
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="/assets/stylesheets/neumorphism.css">
+    <link rel="stylesheet" href="/assets/stylesheets/fontawesome.css">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar-main" aria-label="Primary navigation"
+            class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light">
+            <div class="container position-relative">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="/">
+                    <h5 class="m-0 font-weight-bolder">
+                        <span class="fa fa-play icon-log text-warning" aria-hidden="true"></span>
+                        <span class="text-capitalize">MovieMaster</span>
+                    </h5>
+                </a>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="/" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                    <span class="fa fa-play icon-log text-warning" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <a href="#navbar_global" class="fa fa-times" data-toggle="collapse"
+                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                    title="close" aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link font-weight-bold">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link font-weight-bold">Genre</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <span class="nav-link-inner-text font-weight-bold">Location</span>
+                                <span class="fa fa-angle-down nav-link-arrow ml-2"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-soft">
+                                <h5><a class="text-secondary text-truncate font-weight-bold mx-3" href="">Erumely,
+                                        Kerala, India</a></h5>
+                                <li><a class="dropdown-item" href="/login"><i
+                                            class="fa fa-location-arrow text-secondary mr-2"></i> Pick another
+                                        location</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <span class="nav-link-inner-text font-weight-bold">Account</span>
+                                <span class="fa fa-angle-down nav-link-arrow ml-2"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-soft">
+                                <h5 class="row px-3">
+                                    <div class="col my-auto">
+                                        <a class="text-secondary font-weight-bold" href="">Account</a>
+                                    </div>
+                                    <div class="col">
+                                        <img src="../assets/images/profile.png" class="profile_img float-right">
+                                    </div>
+                                </h5>
+                                <li><a class="dropdown-item" href="/login"><i
+                                            class="fa fa-sign-in text-secondary mr-2"></i> Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <div class="search-right">
+                                <a href="#search" class="btn btn-primary btn-sm font-weight-bold px-3" title="search">
+                                    Search <span class="fa fa-search ml-3" aria-hidden="true"></span>
+                                </a>
+                                <div id="search" class="pop-overlay">
+                                    <div class="popup">
+                                        <form class="search-box" id="search-box">
+                                            <input type="search" placeholder="Search your Keyword" name="searchQuery"
+                                                id="searchQuery" required="required" autofocus="" autocomplete="false">
+                                            <button type="submit" class="btn btn-primary mx-2"><span
+                                                    class="fa fa-search" aria-hidden="true"></span></button>
+                                            <div class="bg-white rounded mt-2 py-2" id="results-container" hidden
+                                                style="max-height: 50vh; overflow-y: auto;"></div>
+                                        </form>
+                                    </div>
+                                    <a class="close" href="#close">×</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                        data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="min-vh-100 d-flex align-items-center my-5 pt-5">
+        <div class="container row mt-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="profile-card mb-5">
+                    <div class="card bg-primary shadow-soft border-light" style="height: 25rem;">
+                        <div class="row">
+                            <div class="col">
+                                <div
+                                    class="profile-image bg-primary shadow-inset border border-light rounded p-3 ml-3 mt-n5">
+                                    <img src="../assets/images/user.jpg" class="card-img-top rounded"
+                                        alt="Bonnie Avatar">
+                                </div>
+                            </div>
+                            <div class="col-3 text-right my-auto mr-3">
+                                <button class="btn btn-primary btn-sm btn-icon-only mb-3"><span
+                                        class="fa fa-trash text-danger"></span></button>
+                                <br>
+                                <button class="btn btn-primary btn-sm btn-icon-only"><span
+                                        class="fa fa-upload text-info"></span></button>
+                            </div>
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <h3 class="h5 pl-2 mb-3 font-weight-bolder text-twitter">Vishnu C Prasad</h3>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <a type="button" class="btn btn-primary btn-icon-only btn-sm" data-toggle="modal"
+                                        data-target="#editProfileModal">
+                                        <span class="fa fa-pencil text-info"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog"
+                                aria-labelledby="editProfileModal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content shadow-soft">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title mb-0" id="modal-title-default">Edit Profile</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" id="editProfileForm">
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">
+                                                            <div class="input-group shadow-none mb-4">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="btn shadow-none border-0"><span
+                                                                            class="fa fa-user text-twitter"></span></span>
+                                                                </div>
+                                                                <input
+                                                                    class="form-control form-control-sm rounded border-0"
+                                                                    id="nameInput" placeholder="Vishnu C Prasad"
+                                                                    type="text" aria-label="name" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <div class="input-group shadow-none mb-4">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text border-0"><span
+                                                                            class="fa fa-venus-mars text-twitter"></span></span>
+                                                                </div>
+                                                                <select class="custom-select custom-select-sm rounded"
+                                                                    id="genderSelection" required>
+                                                                    <option value="Male">Male</option>
+                                                                    <option value="Female">Female</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group shadow-none mb-4">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text border-0"><span
+                                                                    class="fa fa-envelope text-twitter"></span></span>
+                                                        </div>
+                                                        <input class="form-control form-control-sm rounded border-0"
+                                                            id="emailInput" placeholder="mail@site.com" type="text"
+                                                            aria-label="email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <div class="input-group shadow-none mb-4">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text border-0"><span
+                                                                            class="fa fa-flag text-twitter"></span></span>
+                                                                </div>
+                                                                <select class="custom-select custom-select-sm rounded"
+                                                                    id="contrySelection" required>
+                                                                    <option selected value="">Choose...</option>
+                                                                    <option value="+91">India</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">
+                                                            <div class="input-group shadow-none mb-4">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text border-0"><span
+                                                                            class="fa fa-phone text-twitter"></span></span>
+                                                                </div>
+                                                                <input
+                                                                    class="form-control form-control-sm rounded border-0"
+                                                                    id="mobileInput" placeholder="9999999999"
+                                                                    type="text" aria-label="mobile" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-block btn-primary"
+                                                    id="editProfileSubmit">
+                                                    <span id="editProfileSubmitBtn">
+                                                        Save
+                                                    </span>
+                                                    <span id="editProfileLoadingBtn" hidden>
+                                                        <span class="spinner-grow spinner-grow-sm" role="status"
+                                                            aria-hidden="true"></span>
+                                                        <span class="spinner-grow spinner-grow-sm" role="status"
+                                                            aria-hidden="true"></span>
+                                                        <span class="spinner-grow spinner-grow-sm" role="status"
+                                                            aria-hidden="true"></span>
+                                                        <span class="spinner-grow spinner-grow-sm" role="status"
+                                                            aria-hidden="true"></span>
+                                                        <span class="spinner-grow spinner-grow-sm" role="status"
+                                                            aria-hidden="true"></span>
+                                                    </span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-5">
+                                <div class="btn btn-primary btn-block text-left font-weight-bolder mb-3"><span
+                                        class="fa fa-ticket text-twitter"></span> My Orders</div>
+                                <div class="btn btn-primary btn-block text-left font-weight-bolder"><span
+                                        class="fa fa-power-off text-twitter"></span> Logout</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card bg-primary shadow-soft border-light mb-5" style="height: 25rem;">
+                    <div class="card-body p-5">
+                        <h3 class="h4 card-title mb-3 text-twitter">Refferal</h3>
+                        <div class="row h-100">
+                            <div class="col-12 my-auto">
+                                <p class="card-text mt-4">Give your friend a 50 Rs and get credit 100 Rs on his / her first
+                                    booking.</p>
+                                <div class="form-group mt-5">
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><span class="fa fa-link text-twitter"></span></span>
+                                        </div>
+                                        <input class="form-control form-control-sm" id="mobileInput"
+                                            placeholder="https://moviemaster.live" type="url" aria-label="mobile" required>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary btn-sm"><span
+                                                    class="fa fa-copy text-twitter"></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card bg-primary shadow-soft border-light" style="height: 25rem;">
+                    <div class="card-body p-5 mb-5">
+                        <h3 class="h4 card-title text-twitter">Wallet</h3>
+                        <div class="row h-100">
+                            <div class="col-12 my-auto text-center">
+                                <span>Balance</span>
+                                <h1 style="font-size: 5rem;">0</h1>
+                                <span>Rs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer-66 -->
+    <footer class="w3l-footer">
+        <section class="footer-inner-main">
+            <div class="footer-hny-grids py-5">
+                <div class="container py-lg-4">
+                    <div class="text-txt">
+                        <div class="right-side">
+                            <div class="row footer-links">
+                                <div class="col-md-4 col-sm-6 sub-two-right mt-5">
+                                    <h6>Movies</h6>
+                                    <ul>
+                                        <li><a href="/">Movies</a></li>
+                                        <li><a href="/">Genre</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-6 sub-two-right mt-5">
+                                    <h6>Information</h6>
+                                    <ul>
+                                        <li><a href="/login">Login</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-6 sub-two-right mt-5">
+                                    <h6>Locations</h6>
+                                    <ul>
+                                        <li><a href="/">India</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="below-section">
+                <div class="container">
+                    <div class="copyright-footer">
+                        <div class="columns text-lg-left">
+                            <p>&copy; 2020 MovieMaster. All rights reserved | Developed by <a href="/">Vishnu C
+                                    Prasad</a></p>
+                        </div>
+
+                        <ul class="social text-lg-right">
+                            <li><a href="/"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="/"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="/"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="/"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- copyright -->
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                <span class="fa fa-arrow-up" aria-hidden="true"></span>
+            </button>
+            <!-- /move top -->
+
+        </section>
+    </footer>
+    <!--//footer-66 -->
+
+    <script src="../assets/javascripts/jquery.min.js"></script>
+    <script src="../assets/javascripts/jquery.counterup.min.js"></script>
+    <script src="../assets/javascripts/jquery.countdown.min.js"></script>
+    <script src="../assets/javascripts/popper.min.js"></script>
+    <script src="../assets/javascripts/bootstrap.min.js"></script>
+    <script src="../assets/javascripts/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/javascripts/owl.carousel.js"></script>
+    <script src="../assets/javascripts/owl.config.js"></script>
+    <script src="../assets/javascripts/neumorphism.js"></script>
+    <script src="../assets/javascripts/script.js"></script>
+</body>
+
+</html>
