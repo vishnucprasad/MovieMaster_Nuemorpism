@@ -55,6 +55,76 @@ $('#verificationForm').submit((e) => {
     $('#verificationLoadingBtn').removeAttr('hidden');
 
     setTimeout(() => {
-        $('#verificationLoadingBtn').html('<span class="fa fa-check text-success"></span> Approved');
+        iziToast.show({
+            title: 'Approved',
+            titleColor: '#03c895',
+            icon: 'fa fa-check',
+            iconColor: '#03c895',
+            class: 'shadow-soft border-light',
+        });
     }, 2000);
 });
+
+const loadImage = (e) => {
+    document.getElementById('profilePic').src = URL.createObjectURL(e.target.files[0]);
+
+    $('#profilePicUploadBtn').attr('hidden', true);
+    $('#profilePicConfirmBtn').removeAttr('hidden');
+}
+
+$('#updateProfilePicForm').submit((e) => {
+    e.preventDefault();
+    $('#profilePicSubmitBtn').attr('hidden', true);
+    $('#profilePicLoadingBtn').removeAttr('hidden');
+
+    setTimeout(() => {
+        $('#profilePicSubmitBtn').removeAttr('hidden');
+        $('#profilePicLoadingBtn').attr('hidden', true);
+        $('#profilePicConfirmBtn').attr('hidden', true);
+        $('#profilePicUploadBtn').removeAttr('hidden');
+        iziToast.show({
+            title: 'Successfully changed profile picture',
+            titleColor: '#03c895',
+            icon: 'fa fa-check',
+            iconColor: '#03c895',
+            class: 'shadow-soft border-light',
+        });
+    }, 2000);
+});
+
+$('#editProfileForm').submit((e) => {
+    e.preventDefault();
+    $('#editProfileSubmitBtn').attr('hidden', true);
+    $('#editProfileLoadingBtn').removeAttr('hidden');
+
+    setTimeout(() => {
+        $('#editProfileSubmitBtn').removeAttr('hidden');
+        $('#editProfileLoadingBtn').attr('hidden', true);
+        iziToast.show({
+            title: 'Successfully saved',
+            titleColor: '#03c895',
+            icon: 'fa fa-check',
+            iconColor: '#03c895',
+            class: 'shadow-soft border-light',
+        });
+    }, 2000);
+});
+
+const copyRefferalLink = (e) => {
+    e.preventDefault();
+
+    const copyText = document.getElementById('refferalLink');
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    document.execCommand("copy");
+
+    iziToast.show({
+        title: 'Successfully copied to the clipboard',
+        titleColor: '#03c895',
+        icon: 'fa fa-check',
+        iconColor: '#03c895',
+        class: 'shadow-soft border-light',
+    });
+}

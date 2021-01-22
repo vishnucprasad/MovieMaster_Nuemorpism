@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="/assets/stylesheets/neumorphism.css">
     <link rel="stylesheet" href="/assets/stylesheets/fontawesome.css">
+    <link rel="stylesheet" href="/assets/stylesheets/iziToast.css">
     <link rel="stylesheet" href="/assets/stylesheets/style.css">
 </head>
 
@@ -117,18 +118,29 @@
                     <div class="card bg-primary shadow-soft border-light" style="height: 25rem;">
                         <div class="row">
                             <div class="col">
-                                <div
-                                    class="profile-image bg-primary shadow-inset border border-light rounded p-3 ml-3 mt-n5">
+                                <div class="profile-image bg-primary shadow-inset border border-light rounded p-3 ml-3 mt-n5">
                                     <img src="../assets/images/user.jpg" class="card-img-top rounded"
-                                        alt="Bonnie Avatar">
+                                        alt="Avatar" id="profilePic" style=" height: 100%; object-fit: cover !important;">
                                 </div>
                             </div>
                             <div class="col-3 text-right my-auto mr-3">
                                 <button class="btn btn-primary btn-sm btn-icon-only mb-3"><span
                                         class="fa fa-trash text-danger"></span></button>
                                 <br>
-                                <button class="btn btn-primary btn-sm btn-icon-only"><span
-                                        class="fa fa-upload text-info"></span></button>
+                                <form action="" method="POST" enctype="multipart/form-data" id="updateProfilePicForm">
+                                    <label class="btn btn-primary btn-sm btn-icon-only" for="my-file-selector" id="profilePicUploadBtn">
+                                        <input id="my-file-selector" required type="file" name="ownerPicture"
+                                            style="display:none" onchange="loadImage(event);"><span
+                                            class="fa fa-upload text-info"></span>
+                                    </label>
+                                    <button type="submit" class="btn btn-primary btn-sm btn-icon-only" id="profilePicConfirmBtn" hidden>
+                                        <span class="fa fa-check text-success" id="profilePicSubmitBtn"></span>
+                                        <span id="profilePicLoadingBtn" hidden>
+                                            <span class="spinner-grow spinner-grow-sm" role="status"
+                                                aria-hidden="true"></span>
+                                        </span>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <div class="card-body p-3">
@@ -165,8 +177,8 @@
                                                                 </div>
                                                                 <input
                                                                     class="form-control form-control-sm rounded border-0"
-                                                                    id="nameInput" placeholder="Vishnu C Prasad"
-                                                                    type="text" aria-label="name" required>
+                                                                    id="nameInput" value="Vishnu C Prasad" type="text"
+                                                                    aria-label="name" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -193,7 +205,7 @@
                                                                     class="fa fa-envelope text-twitter"></span></span>
                                                         </div>
                                                         <input class="form-control form-control-sm rounded border-0"
-                                                            id="emailInput" placeholder="mail@site.com" type="text"
+                                                            id="emailInput" value="mail@site.com" type="text"
                                                             aria-label="email" required>
                                                     </div>
                                                 </div>
@@ -207,7 +219,6 @@
                                                                 </div>
                                                                 <select class="custom-select custom-select-sm rounded"
                                                                     id="contrySelection" required>
-                                                                    <option selected value="">Choose...</option>
                                                                     <option value="+91">India</option>
                                                                 </select>
                                                             </div>
@@ -222,8 +233,8 @@
                                                                 </div>
                                                                 <input
                                                                     class="form-control form-control-sm rounded border-0"
-                                                                    id="mobileInput" placeholder="9999999999"
-                                                                    type="text" aria-label="mobile" required>
+                                                                    id="mobileInput" value="9999999999" type="text"
+                                                                    aria-label="mobile" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -264,20 +275,23 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card bg-primary shadow-soft border-light mb-5" style="height: 25rem;">
                     <div class="card-body p-5">
-                        <h3 class="h4 card-title mb-3 text-twitter">Refferal</h3>
+                        <h3 class="h5 card-title font-weight-bolder text-twitter mb-3">Refferal</h3>
                         <div class="row h-100">
                             <div class="col-12 my-auto">
-                                <p class="card-text mt-4">Give your friend a 50 Rs and get credit 100 Rs on his / her first
+                                <p class="card-text mt-4">Give your friend a 50 Rs and get credit 100 Rs on his / her
+                                    first
                                     booking.</p>
                                 <div class="form-group mt-5">
                                     <div class="input-group mb-4">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><span class="fa fa-link text-twitter"></span></span>
+                                            <span class="input-group-text"><span
+                                                    class="fa fa-link text-twitter"></span></span>
                                         </div>
-                                        <input class="form-control form-control-sm" id="mobileInput"
-                                            placeholder="https://moviemaster.live" type="url" aria-label="mobile" required>
+                                        <input class="form-control form-control-sm" id="refferalLink"
+                                            value="https://moviemaster.live" type="url" readonly>
                                         <div class="input-group-append">
-                                            <button class="btn btn-primary btn-sm"><span
+                                            <button class="btn btn-primary btn-sm"
+                                                onclick="copyRefferalLink(event)"><span
                                                     class="fa fa-copy text-twitter"></span></button>
                                         </div>
                                     </div>
@@ -290,7 +304,7 @@
             <div class="col-lg-4 col-md-12">
                 <div class="card bg-primary shadow-soft border-light" style="height: 25rem;">
                     <div class="card-body p-5 mb-5">
-                        <h3 class="h4 card-title text-twitter">Wallet</h3>
+                        <h3 class="h5 card-title font-weight-bolder text-twitter mb-3">Wallet</h3>
                         <div class="row h-100">
                             <div class="col-12 my-auto text-center">
                                 <span>Balance</span>
@@ -379,6 +393,7 @@
     <script src="../assets/javascripts/owl.carousel.js"></script>
     <script src="../assets/javascripts/owl.config.js"></script>
     <script src="../assets/javascripts/neumorphism.js"></script>
+    <script src="../assets/javascripts/iziToast.js"></script>
     <script src="../assets/javascripts/script.js"></script>
 </body>
 
