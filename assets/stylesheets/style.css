@@ -3086,6 +3086,10 @@ html {
   display: block;
 }
 
+.poster-info {
+  max-width: 100vw !important;
+}
+
 .d-grid {
   display: grid;
 }
