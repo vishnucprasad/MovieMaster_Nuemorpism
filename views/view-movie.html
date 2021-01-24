@@ -111,466 +111,615 @@
         </nav>
     </header>
 
-    <section class="w3l-main-slider position-relative" id="home">
-        <div class="item carousel slide">
-            <li>
-                <div class="slider-info banner-view bg bg2 rounded-0"
-                    style="background: url(../assets/images/movies/banner1.jpg) no-repeat center; background-size: cover;">
-                    <div class="banner-info poster-info">
-                        <p class="text-truncate mb-3">
-                            <span class="bg-warning font-weight-bold text-truncate rounded px-3 py-1">
-                                Genre
-                            </span>
-                            <span class="bg-info font-weight-bold text-truncate rounded ml-3 px-3 py-1">
-                                Language
-                            </span>
-                        </p>
-                        <h3>Movie Title</h3>
-                        <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Cast :
-                            </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla numquam dolor
-                            nisi necessitatibus voluptate odit nihil impedit at vero sit, et pariatur alias
-                            sequi repellat quos veniam explicabo accusantium consequatur.</p>
-                        <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Director :
-                            </span>Director</p>
-                        <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Run Time :
-                            </span>03:02</p>
-                        <p class="text-truncate mt-1"><span class="font-weight-bold">Release Date :
-                            </span>01-01-2021</p>
-                        <a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
-                            <span class="video-play-icon">
-                                <span class="fa fa-play"></span>
-                            </span>
-                            <h6>Watch Trailer</h6>
+    <section class="pb-5">
+        <section class="w3l-main-slider position-relative" id="home">
+            <div class="item carousel slide">
+                <li>
+                    <div class="slider-info banner-view bg bg2 rounded-0"
+                        style="background: url(../assets/images/movies/banner1.jpg) no-repeat center; background-size: cover;">
+                        <div class="banner-info poster-info">
+                            <p class="text-truncate mb-3">
+                                <span class="bg-warning font-weight-bold text-truncate rounded px-3 py-1">
+                                    Genre
+                                </span>
+                                <span class="bg-info font-weight-bold text-truncate rounded ml-3 px-3 py-1">
+                                    Language
+                                </span>
+                            </p>
+                            <h3>Movie Title</h3>
+                            <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Cast :
+                                </span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla numquam dolor
+                                nisi necessitatibus voluptate odit nihil impedit at vero sit, et pariatur alias
+                                sequi repellat quos veniam explicabo accusantium consequatur.</p>
+                            <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Director :
+                                </span>Director</p>
+                            <p class="text-truncate mb-0  mt-1"><span class="font-weight-bold">Run Time :
+                                </span>03:02</p>
+                            <p class="text-truncate mt-1"><span class="font-weight-bold">Release Date :
+                                </span>01-01-2021</p>
+                            <a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
+                                <span class="video-play-icon">
+                                    <span class="fa fa-play"></span>
+                                </span>
+                                <h6>Watch Trailer</h6>
+                            </a>
+                            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                            <div id="small-dialog1" class="zoom-anim-dialog mfp-hide small-dialog">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </section>
+        <section class="w3l-grids">
+            <div class="grids-main">
+                <div class="container py-lg-3">
+                    <div class="headerhny-title">
+                        <div class="w3l-title-grids">
+                            <div class="headerhny-left">
+                                <h3 class="hny-title m-0">Available Shows</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-wrapper position-relative mb-4">
+                        <ul class="nav nav-pills flex-column flex-sm-row" id="tabs-text" role="tablist">
+                            <li class="nav-item mr-sm-3 mr-md-0">
+                                <a class="nav-link mb-sm-3 mb-md-0 active" id="today-tab" data-toggle="tab"
+                                    href="#today" role="tab" aria-controls="today" aria-selected="true">Today</a>
+                            </li>
+                            <li class="nav-item mr-sm-3 mr-md-0">
+                                <a class="nav-link mb-sm-3 mb-md-0" id="tomorrow-tab" data-toggle="tab" href="#tomorrow"
+                                    role="tab" aria-controls="tomorrow" aria-selected="false">Tomorrow</a>
+                            </li>
+                            <li class="nav-item mr-sm-3 mr-md-0">
+                                <a class="nav-link mb-sm-3 mb-md-0" id="dayAfterTomorrow-tab" data-toggle="tab"
+                                    href="#dayAfterTomorrow" role="tab" aria-controls="dayAfterTomorrow"
+                                    aria-selected="false">Day after tomorrow</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End of Tab Nav -->
+                    <!-- Tab Content -->
+                    <div class="card shadow-inset bg-primary border-light p-4 rounded">
+                        <div class="card-body p-0">
+                            <div class="tab-content" id="tabcontent1">
+                                <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                    aria-labelledby="today-tab">
+                                    <div class="accordion shadow-soft rounded">
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-1" data-target="#panel-1" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Grand Opera</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-1">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-2" data-target="#panel-2" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false"
+                                                aria-controls="panel-1">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Focus Cinemas</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-2">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-3" data-target="#panel-3" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false"
+                                                aria-controls="panel-1">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Universal</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-3">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tomorrow" role="tabpanel" aria-labelledby="tomorrow-tab">
+                                    <div class="accordion shadow-soft rounded">
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-4" data-target="#panel-4" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Grand Opera</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-4">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-5" data-target="#panel-5" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false"
+                                                aria-controls="panel-1">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Focus Cinemas</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-5">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="dayAfterTomorrow" role="tabpanel"
+                                    aria-labelledby="dayAfterTomorrow-tab">
+                                    <div class="accordion shadow-soft rounded">
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-6" data-target="#panel-6" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Grand Opera</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-6">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-sm card-body bg-primary border-light mb-0">
+                                            <a href="#panel-7" data-target="#panel-7" class="accordion-panel-header"
+                                                data-toggle="collapse" role="button" aria-expanded="false"
+                                                aria-controls="panel-1">
+                                                <span class="icon-title h6 mb-0 font-weight-bold"><span
+                                                        class="fa fa-file-movie-o"></span>Universal</span>
+                                                <span class="icon"><span class="fa fa-ticket"></span></span>
+                                            </a>
+                                            <div class="collapse" id="panel-7">
+                                                <div class="pt-3">
+                                                    <div class="shadow-inset rounded p-3">
+                                                        <div class="row">
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 09:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-1</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-2">
+                                                                <div class="card bg-primary shadow-soft border-light mb-3" style="height: 15rem;">
+                                                                    <div class="card-body p-3">
+                                                                        <h3 class="h5 card-title font-weight-bolder text-twitter text-center mb-5">Screen-2</h3>
+                                                                        <div class="row h-100 pb-5">
+                                                                            <div class="col-12">
+                                                                                <h6 class="border-0 text-center">Date : 23-01-2021</h6>
+                                                                                <h6 class="border-0 text-center">Time : 12:00</h6>
+                                                                            </div>
+                                                                            <div class="col-12 border-0 text-center" scope="col">
+                                                                                <a href="" class="btn btn-primary btn-sm px-5">Book now</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w3l-grids pt-5">
+            <div class="grids-main">
+                <div class="container py-lg-3">
+                    <div class="headerhny-title shadow-soft border-light rounded p-3">
+                        <div class="w3l-title-grids">
+                            <div class="headerhny-left">
+                                <h3 class="hny-title m-0">Now Showing Movies</h3>
+                            </div>
+                            <div class="headerhny-right text-right">
+                                <h4><a class="btn btn-primary btn-sm font-weight-bold text-danger border-light px-3"
+                                        href="/now-showing-movies">Show all</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3l-populohny-grids px-2">
+                        <a href="/view-movie?movieId={{this._id}}" class="animate-up-8">
+                            <div class="item vhny-grid shadow-soft">
+                                <div class="box16">
+                                    <figure>
+                                        <img class="rounded" src="/assets/images/movies/banner1.jpg"
+                                            style="height: 25rem; object-fit: cover !important;">
+                                    </figure>
+                                    <div class="box-content">
+                                        <h3 class="title">Movie Title</h3>
+                                        <h4>
+                                            <span class="post"><span class="fa fa-clock-o"> Run Time : </span>
+                                                03:02</span>
+                                        </h4>
+                                        <h4>
+                                            <span
+                                                class="post bg-warning text-dark font-weight-bold text-truncate rounded px-3">Genre</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
-                        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-                        <div id="small-dialog1" class="zoom-anim-dialog mfp-hide small-dialog">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-_DJEzZk2pc"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </div>
-    </section>
-    <section class="w3l-grids">
-        <div class="grids-main py-5">
-            <div class="container py-lg-3">
-                <div class="headerhny-title">
-                    <div class="w3l-title-grids">
-                        <div class="headerhny-left">
-                            <h3 class="hny-title m-0">Available Shows</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav-wrapper position-relative mb-4">
-                    <ul class="nav nav-pills flex-column flex-sm-row" id="tabs-text" role="tablist">
-                        <li class="nav-item mr-sm-3 mr-md-0">
-                            <a class="nav-link mb-sm-3 mb-md-0 active" id="today-tab" data-toggle="tab" href="#today"
-                                role="tab" aria-controls="today" aria-selected="true">Today</a>
-                        </li>
-                        <li class="nav-item mr-sm-3 mr-md-0">
-                            <a class="nav-link mb-sm-3 mb-md-0" id="tomorrow-tab" data-toggle="tab" href="#tomorrow"
-                                role="tab" aria-controls="tomorrow" aria-selected="false">Tomorrow</a>
-                        </li>
-                        <li class="nav-item mr-sm-3 mr-md-0">
-                            <a class="nav-link mb-sm-3 mb-md-0" id="dayAfterTomorrow-tab" data-toggle="tab"
-                                href="#dayAfterTomorrow" role="tab" aria-controls="dayAfterTomorrow"
-                                aria-selected="false">Day after tomorrow</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- End of Tab Nav -->
-                <!-- Tab Content -->
-                <div class="card shadow-inset bg-primary border-light p-4 rounded">
-                    <div class="card-body p-0">
-                        <div class="tab-content" id="tabcontent1">
-                            <div class="tab-pane fade show active" id="today" role="tabpanel"
-                                aria-labelledby="today-tab">
-                                <div class="accordion shadow-soft rounded">
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-1" data-target="#panel-1" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Grand Opera</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-1">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-2" data-target="#panel-2" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false"
-                                            aria-controls="panel-1">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Focus Cinemas</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-2">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-3" data-target="#panel-3" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false"
-                                            aria-controls="panel-1">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Universal</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-3">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <a href="/view-movie?movieId={{this._id}}" class="animate-up-8">
+                            <div class="item vhny-grid shadow-soft">
+                                <div class="box16">
+                                    <figure>
+                                        <img class="rounded" src="/assets/images/movies/banner2.jpg"
+                                            style="height: 25rem; object-fit: cover !important;">
+                                    </figure>
+                                    <div class="box-content">
+                                        <h3 class="title">Movie Title</h3>
+                                        <h4>
+                                            <span class="post"><span class="fa fa-clock-o"> Run Time : </span>
+                                                03:02</span>
+                                        </h4>
+                                        <h4>
+                                            <span
+                                                class="post bg-warning text-dark font-weight-bold text-truncate rounded px-3">Genre</span>
+                                        </h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="tomorrow" role="tabpanel" aria-labelledby="tomorrow-tab">
-                                <div class="accordion shadow-soft rounded">
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-4" data-target="#panel-4" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Grand Opera</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-4">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-5" data-target="#panel-5" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false"
-                                            aria-controls="panel-1">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Focus Cinemas</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-5">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="dayAfterTomorrow" role="tabpanel"
-                                aria-labelledby="dayAfterTomorrow-tab">
-                                <div class="accordion shadow-soft rounded">
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-6" data-target="#panel-6" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Grand Opera</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-6">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card card-sm card-body bg-primary border-light mb-0">
-                                        <a href="#panel-7" data-target="#panel-7" class="accordion-panel-header"
-                                            data-toggle="collapse" role="button" aria-expanded="false"
-                                            aria-controls="panel-1">
-                                            <span class="icon-title h6 mb-0 font-weight-bold"><span
-                                                    class="fa fa-file-movie-o"></span>Universal</span>
-                                            <span class="icon"><span class="fa fa-ticket"></span></span>
-                                        </a>
-                                        <div class="collapse" id="panel-7">
-                                            <div class="pt-3">
-                                                <div class="table-responsive-sm shadow-inset rounded">
-                                                    <table class="table table-striped">
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">09:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-1</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="border-0" scope="col">Screen-2</th>
-                                                            <th class="border-0 text-center" scope="col">23-01-2021
-                                                            </th>
-                                                            <th class="border-0 text-right" scope="col">12:00</th>
-                                                            <th class="border-0" scope="col"><a href=""
-                                                                    class="btn btn-primary btn-sm px-5 float-right">Book
-                                                                    now</a></th>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="w3l-grids">
-        <div class="grids-main py-5">
-            <div class="container py-lg-3">
-                <div class="headerhny-title shadow-soft border-light rounded p-3">
-                    <div class="w3l-title-grids">
-                        <div class="headerhny-left">
-                            <h3 class="hny-title m-0">Now Showing Movies</h3>
-                        </div>
-                        <div class="headerhny-right text-right">
-                            <h4><a class="btn btn-primary btn-sm font-weight-bold text-danger border-light px-3"
-                                    href="/now-showing-movies">Show all</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3l-populohny-grids px-2">
-                    <a href="/view-movie?movieId={{this._id}}" class="animate-up-8">
-                        <div class="item vhny-grid shadow-soft">
-                            <div class="box16">
-                                <figure>
-                                    <img class="rounded" src="/assets/images/movies/banner1.jpg"
-                                        style="height: 25rem; object-fit: cover !important;">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Movie Title</h3>
-                                    <h4>
-                                        <span class="post"><span class="fa fa-clock-o"> Run Time : </span>
-                                            03:02</span>
-                                    </h4>
-                                    <h4>
-                                        <span
-                                            class="post bg-warning text-dark font-weight-bold text-truncate rounded px-3">Genre</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/view-movie?movieId={{this._id}}" class="animate-up-8">
-                        <div class="item vhny-grid shadow-soft">
-                            <div class="box16">
-                                <figure>
-                                    <img class="rounded" src="/assets/images/movies/banner2.jpg"
-                                        style="height: 25rem; object-fit: cover !important;">
-                                </figure>
-                                <div class="box-content">
-                                    <h3 class="title">Movie Title</h3>
-                                    <h4>
-                                        <span class="post"><span class="fa fa-clock-o"> Run Time : </span>
-                                            03:02</span>
-                                    </h4>
-                                    <h4>
-                                        <span
-                                            class="post bg-warning text-dark font-weight-bold text-truncate rounded px-3">Genre</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        </section>
     </section>
 
     <!-- footer-66 -->
