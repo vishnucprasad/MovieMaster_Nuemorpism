@@ -1,3 +1,5 @@
+vex.defaultOptions.className = 'vex-theme-os'
+
 $(window).on("scroll", function () {
     const scroll = $(window).scrollTop();
 
@@ -139,9 +141,25 @@ const confirmSelection = () => {
     });
 
     if (allSeatsVals.length < 1) {
-        alert('No Seat Selected. Please select atleast one seat.');
+        vex.dialog.open({
+            input: [
+                '<h3 class="text-center"><span class="fa fa-info text-twitter"></span></h3>',
+                '<p class="text-center font-weight-bold">No Seat Selected. Please select atleast one seat.</p>'
+            ].join(''),
+            buttons: [
+                $.extend({}, vex.dialog.buttons.YES, { text: 'Ok' })
+            ]
+        })
     } else if (allSeatsVals.length > 10) {
-        alert('You are only able to select a maximum of 10 seats per order.');
+        vex.dialog.open({
+            input: [
+                '<h3 class="text-center"><span class="fa fa-info text-twitter"></span></h3>',
+                '<p class="text-center font-weight-bold">You are only able to select a maximum of 10 seats per booking.</p>'
+            ].join(''),
+            buttons: [
+                $.extend({}, vex.dialog.buttons.YES, { text: 'Ok' })
+            ]
+        })
     } else {
         allSeatsVals.forEach(seat => {
             price += parseInt($(`#${seat}`).data('price'));
@@ -152,10 +170,12 @@ const confirmSelection = () => {
         $('#payableAmount').html(price);
         $('#seatsDisplay').html(allSeatsVals.toString());
 
-        $('#checkoutSidebar').css('width', '20rem');
-        $('#sidebarBody').fadeIn(1000);
-        $('#sidebarClose').slideDown(600);
-        checkoutTimeout();
+        $('#sidebarWrapper').fadeIn();
+        $('#checkoutSidebar').animate({ width: "20rem" }, 'slow', 'swing', () => {
+            $('#sidebarBody').fadeIn(1000);
+            $('#sidebarClose').slideDown(600);
+            checkoutTimeout();
+        });
     }
 }
 
@@ -163,7 +183,8 @@ const closeSidebar = () => {
     $('#sidebarBody').fadeOut(1000);
     $('#sidebarClose').slideUp(600);
     setTimeout(() => {
-        $('#checkoutSidebar').css('width', '0');
+        $('#sidebarWrapper').fadeOut()
+        $('#checkoutSidebar').animate({ width: "0" }, 'slow', 'swing', () => location.reload());
     }, 1000);
 }
 
@@ -219,6 +240,7 @@ const checkoutTimeout = () => {
 
     function onTimesUp() {
         clearInterval(timerInterval);
+        location.reload();
     }
 
     function startTimer() {
@@ -292,8 +314,4 @@ const checkoutTimeout = () => {
             .getElementById("base-timer-path-remaining")
             .setAttribute("stroke-dasharray", circleDasharray);
     }
-
-    setTimeout(() => {
-        location.replace('/');
-    }, 5 * 60 * 1000);
 }

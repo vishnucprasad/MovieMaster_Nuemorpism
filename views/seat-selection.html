@@ -8,10 +8,12 @@
 
     <link rel="icon" type="image/png" href="/favicon.ico" />
 
-    <link rel="stylesheet" href="/assets/stylesheets/neumorphism.css">
-    <link rel="stylesheet" href="/assets/stylesheets/fontawesome.css">
-    <link rel="stylesheet" href="/assets/stylesheets/iziToast.css">
-    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+    <link rel="stylesheet" href="../assets/stylesheets/neumorphism.css">
+    <link rel="stylesheet" href="../assets/stylesheets/fontawesome.css">
+    <link rel="stylesheet" href="../assets/stylesheets/iziToast.css">
+    <link rel="stylesheet" href="../assets/stylesheets/vex.css">
+    <link rel="stylesheet" href="../assets/stylesheets/vex-theme-os.css">
+    <link rel="stylesheet" href="../assets/stylesheets/style.css">
 </head>
 
 <body>
@@ -81,7 +83,7 @@
                         <li class="nav-item">
                             <div class="search-right">
                                 <a href="#search" class="btn btn-primary btn-sm font-weight-bold px-3" title="search">
-                                    Search <span class="fa fa-search ml-3" aria-hidden="true"></span>
+                                    Search <span class="fa fa-info ml-3" aria-hidden="true"></span>
                                 </a>
                                 <div id="search" class="pop-overlay">
                                     <div class="popup">
@@ -597,81 +599,83 @@
                                     </div>
                                     <!-- //seat layout -->
                                 </div>
-                                <div class="checkout-sidebar shadow-soft bg-gradient-primary" id="checkoutSidebar">
-                                    <button
-                                        class="btn btn-primary btn-icon-only rounded-circle text-danger btn-sm ml-n3 mt-n3 sidebar-close"
-                                        onclick="closeSidebar()" id="sidebarClose">
-                                        <span class="fa fa-close"></span>
-                                    </button>
-                                    <div class="sidebar-body py-3 px-4" id="sidebarBody">
-                                        <div class="card bg-primary shadow-soft border-light">
-                                            <div class="card-body">
-                                                <h3 class="wthree text-danger mb-3">Booking Summary</h3>
-                                                <div>
-                                                    <h6 class="text-dark font-weight-bold">Movie Title</h6>
-                                                    <div class="my-3">
-                                                        <p class="text-small">Genre</p>
-                                                        <p class="text-small">Language</p>
+                                <div class="checkout-sidebar-wrapper" id="sidebarWrapper">
+                                    <div class="checkout-sidebar bg-gradient-primary" id="checkoutSidebar">
+                                        <button
+                                            class="btn btn-primary btn-icon-only rounded-circle text-danger btn-sm ml-n3 mt-n3 sidebar-close"
+                                            onclick="closeSidebar()" id="sidebarClose">
+                                            <span class="fa fa-close"></span>
+                                        </button>
+                                        <div class="sidebar-body py-3 px-4" id="sidebarBody">
+                                            <div class="card bg-primary shadow-soft border-light">
+                                                <div class="card-body pb-0">
+                                                    <h3 class="wthree text-danger mb-3">Booking Summary</h3>
+                                                    <div>
+                                                        <h6 class="text-dark font-weight-bold">Movie Title</h6>
+                                                        <div class="my-3">
+                                                            <p class="text-small">Genre</p>
+                                                            <p class="text-small">Language</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row px-3 pb-1">
+                                                        <h6 class="text-twitter font-weight-bold text-uppercase mx-auto">
+                                                            Grand Opera</h6>
+                                                    </div>
+                                                    <div class="row px-3 pb-1">
+                                                        <h6 class="text-dark text-medium">Screen-1
+                                                            <span class="font-weight-normal text-dark">(<span
+                                                                    id="totalSeats"></span> Seats)</span>
+                                                        </h6>
+                                                        <h6 class="ml-auto text-dark text-medium">Rs.<span
+                                                                id="totalPrice"></span></h6>
+                                                    </div>
+                                                    <div class="row px-3 pb-1">
+                                                        <h6 class="text-dark text-medium">Seats</h6>
+                                                        <h6 class="ml-auto text-dark" style="overflow-x: auto;"
+                                                            id="seatsDisplay">
+    
+                                                        </h6>
+                                                    </div>
+                                                    <div class="row px-3 pb-1">
+                                                        <h6 class="text-dark text-medium">Date</h6>
+                                                        <h6 class="ml-auto text-dark text-medium" style="overflow-x: auto;">
+                                                            23-01-2021
+                                                        </h6>
+                                                    </div>
+                                                    <div class="row px-3 pb-1">
+                                                        <h6 class="text-dark text-medium">Time</h6>
+                                                        <h6 class="ml-auto text-dark text-medium" style="overflow-x: auto;">
+                                                            09:00
+                                                        </h6>
                                                     </div>
                                                 </div>
-                                                <div class="row px-3 pb-3">
-                                                    <h6 class="text-twitter font-weight-bold text-uppercase mx-auto">
-                                                        Grand Opera</h6>
-                                                </div>
-                                                <div class="row px-3 pb-3">
-                                                    <h6 class="text-dark text-medium">Screen-1
-                                                        <span class="font-weight-normal text-dark">(<span
-                                                                id="totalSeats"></span> Seats)</span>
-                                                    </h6>
-                                                    <h6 class="ml-auto text-dark text-medium">Rs.<span
-                                                            id="totalPrice"></span></h6>
-                                                </div>
-                                                <div class="row px-3 pb-3">
-                                                    <h6 class="text-dark text-medium">Seats</h6>
-                                                    <h6 class="ml-auto text-dark" style="overflow-x: auto;"
-                                                        id="seatsDisplay">
-
-                                                    </h6>
-                                                </div>
-                                                <div class="row px-3 pb-3">
-                                                    <h6 class="text-dark text-medium">Date</h6>
-                                                    <h6 class="ml-auto text-dark text-medium" style="overflow-x: auto;">
-                                                        23-01-2021
-                                                    </h6>
-                                                </div>
-                                                <div class="row px-3 pb-3">
-                                                    <h6 class="text-dark text-medium">Time</h6>
-                                                    <h6 class="ml-auto text-dark text-medium" style="overflow-x: auto;">
-                                                        09:00
-                                                    </h6>
+                                                <div class="card-footer bg-twitter py-2 px-4">
+                                                    <div class="row px-3">
+                                                        <h6 class="text-white text-medium">Amount Payable</h6>
+                                                        <h6 class="ml-auto text-white text-medium">Rs.<spam
+                                                                id="payableAmount"></spam>
+                                                        </h6>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="card-footer bg-twitter py-3 px-4">
-                                                <div class="row px-3">
-                                                    <h6 class="text-white text-medium">Amount Payable</h6>
-                                                    <h6 class="ml-auto text-white text-medium">Rs.<spam
-                                                            id="payableAmount"></spam>
-                                                    </h6>
+                                            <div class="mt-4">
+                                                <h6 class="text-center">Payment Options</h6>
+                                                <div class="row my-3">
+                                                    <div id="countDown" class="mx-auto"></div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="my-5 pb-5">
-                                            <h6 class="text-center">Payment Options</h6>
-                                            <div class="row my-3">
-                                                <div id="countDown" class="mx-auto"></div>
-                                            </div>
-                                            <div class="row pb-5">
-                                                <div class="col-md-6 mb-3">
-                                                    <a type="button"
-                                                        class="btn btn-warning btn-sm btn-block rounded py-1">
-                                                        <span class="fa fa-paypal text-secondary"> PayPal</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-6 mb-3">
-                                                    <a type="button"
-                                                        class="btn btn-warning btn-sm btn-block rounded py-1">
-                                                        <span class="fa fa-credit-card text-secondary"> RazorPay</span>
-                                                    </a>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <a type="button"
+                                                            class="btn btn-warning btn-sm btn-block rounded py-1">
+                                                            <span class="fa fa-paypal text-secondary"> PayPal</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <a type="button"
+                                                            class="btn btn-warning btn-sm btn-block rounded py-1">
+                                                            <span class="fa fa-credit-card text-secondary"> RazorPay</span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -762,6 +766,7 @@
     <script src="../assets/javascripts/owl.config.js"></script>
     <script src="../assets/javascripts/neumorphism.js"></script>
     <script src="../assets/javascripts/iziToast.js"></script>
+    <script src="../assets/javascripts/vex.combined.js"></script>
     <script src="../assets/javascripts/script.js"></script>
 </body>
 
