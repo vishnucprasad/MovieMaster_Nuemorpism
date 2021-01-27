@@ -8072,6 +8072,15 @@ h3.wthree {
   word-spacing: 10px;
 }
 
+h4.wthree {
+  font-size: 0.8em;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+}
+
 .smallBox::before {
   content: "";
   width: 15px;

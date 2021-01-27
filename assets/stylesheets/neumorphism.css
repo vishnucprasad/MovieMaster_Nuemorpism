@@ -16476,7 +16476,8 @@ button.bg-slack:focus {
 }
 
 .text-monospace {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+    letter-spacing: 3px;
+    word-spacing: 10px;
 }
 
 .text-justify {
