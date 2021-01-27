@@ -59,10 +59,10 @@ $('#verificationForm').submit((e) => {
     setTimeout(() => {
         iziToast.show({
             title: 'Approved',
-            titleColor: '#03c895',
+            titleColor: '#fff',
             icon: 'fa fa-check',
-            iconColor: '#03c895',
-            class: 'shadow-soft border-light',
+            iconColor: '#fff',
+            class: 'bg-slack',
         });
     }, 2000);
 });
@@ -86,10 +86,10 @@ $('#updateProfilePicForm').submit((e) => {
         $('#profilePicUploadBtn').removeAttr('hidden');
         iziToast.show({
             title: 'Successfully changed profile picture',
-            titleColor: '#03c895',
+            titleColor: '#fff',
             icon: 'fa fa-check',
-            iconColor: '#03c895',
-            class: 'shadow-soft border-light',
+            iconColor: '#fff',
+            class: 'bg-slack',
         });
     }, 2000);
 });
@@ -124,10 +124,10 @@ const copyRefferalLink = (e) => {
 
     iziToast.show({
         title: 'Successfully copied to the clipboard',
-        titleColor: '#03c895',
+        titleColor: '#fff',
         icon: 'fa fa-check',
-        iconColor: '#03c895',
-        class: 'shadow-soft border-light',
+        iconColor: '#fff',
+        class: 'bg-slack',
     });
 }
 
@@ -314,4 +314,76 @@ const checkoutTimeout = () => {
             .getElementById("base-timer-path-remaining")
             .setAttribute("stroke-dasharray", circleDasharray);
     }
+}
+
+const sendTicket = () => {
+    vex.dialog.prompt({
+        message: 'Enter email to get ticket to your inbox',
+        placeholder: 'Email',
+        buttons: [
+            $.extend({}, vex.dialog.buttons.YES, { text: 'Send' }),
+            $.extend({}, vex.dialog.buttons.NO, { text: 'Cancel' })
+        ],
+        callback: function (email) {
+            if (email === false) {
+                iziToast.show({
+                    title: `Cancelled`,
+                    titleColor: '#fff',
+                    icon: 'fa fa-close',
+                    iconColor: '#fff',
+                    class: 'bg-danger',
+                });
+            } else if (!email) {
+                vex.dialog.open({
+                    input: [
+                        '<h3 class="text-center"><span class="fa fa-info text-twitter"></span></h3>',
+                        '<p class="text-center font-weight-bold">You must provide an email to send ticket</p>'
+                    ].join(''),
+                    buttons: [
+                        $.extend({}, vex.dialog.buttons.YES, { text: 'Ok' })
+                    ],
+                    callback: function (email) {
+                        iziToast.show({
+                            title: `Cancelled`,
+                            titleColor: '#fff',
+                            icon: 'fa fa-close',
+                            iconColor: '#fff',
+                            class: 'bg-danger',
+                        });
+                    }
+                });
+            } else {
+                vex.dialog.open({
+                    input: [
+                        `<div class="text-center">
+                            <h6>Sending ticket to <span class="text-danger">${email}</span></h6>
+                            <span id="loadingBtn">
+                                <span class="spinner-grow spinner-grow-sm text-twitter" role="status"
+                                    aria-hidden="true"></span>
+                                <span class="spinner-grow spinner-grow-sm text-twitter" role="status"
+                                    aria-hidden="true"></span>
+                                <span class="spinner-grow spinner-grow-sm text-twitter" role="status"
+                                    aria-hidden="true"></span>
+                                <span class="spinner-grow spinner-grow-sm text-twitter" role="status"
+                                    aria-hidden="true"></span>
+                                <span class="spinner-grow spinner-grow-sm text-twitter" role="status"
+                                    aria-hidden="true"></span>
+                            </span>
+                        </div>`
+                    ].join(''),
+                    buttons: []
+                });
+                setTimeout(() => {
+                    vex.closeTop();
+                    iziToast.show({
+                        title: `Successfully send ticket to ${email}`,
+                        titleColor: '#fff',
+                        icon: 'fa fa-check',
+                        iconColor: '#fff',
+                        class: 'bg-slack',
+                    });
+                }, 2000);
+            }
+        }
+    });
 }
